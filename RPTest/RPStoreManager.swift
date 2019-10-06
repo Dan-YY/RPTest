@@ -16,7 +16,7 @@ class RPStoreManager {
     static let sharedInstance = RPStoreManager()
     
 
-    func toJSON(comment: RPComment) -> String{
+    func toJSON(comment: RPComment) -> String {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         let data = try! encoder.encode(comment)
