@@ -12,7 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let comment = RPComment(name: "nameA", comment: "commentA")
+        let annotation = RPAnnotaion(name: "nameB", comment: "commentB", annotaion: "annotaionB")
+
+        let storeManager = RPStoreManager.sharedInstance
+        storeManager.postToStoreA(comment: comment)
+        storeManager.postToStoreB(comment: annotation)
+        
     }
 
 
